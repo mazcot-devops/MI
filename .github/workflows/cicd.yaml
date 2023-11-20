@@ -31,12 +31,4 @@ jobs:
 
 
     - name: Update Helm Chart Image
-      run: |
-        helm repo add stable https://charts.helm.sh/stable
-        helm repo update
-        cd MI/charts  # Change to the correct directory
-        helm upgrade mi-app ./ --namespace mi \
-          --set image.repository=mazcot4devops/mi-app \
-          --set image.tag=latest
-        helm status mi-app --namespace mi
-
+      run: "helm repo add stable https://charts.helm.sh/stable\nhelm repo update\ncd MI/charts  \nhelm upgrade mi-app ./ --namespace mi \\\n  --set image.repository=mazcot4devops/mi-app \\\n  --set image.tag=latest\nhelm status mi-app --namespace mi\n  #magic___^_^___line\n  #magic___^_^___line\n"
