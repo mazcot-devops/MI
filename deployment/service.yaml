@@ -1,11 +1,11 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: MI-app-service
+  name: mi-app-service
   namespace: mi
 spec:
   selector:
-    app: MI-app
+    app: mi-app
   ports:
   - protocol: TCP
     port: 80

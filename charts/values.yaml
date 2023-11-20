@@ -1,7 +1,7 @@
 namespace: mi
 
 image:
-  repository: mazcot4devops/MI-app
+  repository: mazcot4devops/mi-app
   tag: latest
 
 service:
@@ -11,7 +11,7 @@ service:
 
 iam:
   roles:
-  - name: MI-app-role
+  - name: mi-app-role
     policies:
     - name: s3-access-policy
       policyDocument: |

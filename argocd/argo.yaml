@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: MI-app
+  name: mi-app
   namespace: mi
 spec:
   destination:
@@ -11,6 +11,6 @@ spec:
     repoURL: 'https://github.com/mazcot-devops/MI'
     path: 'deployment'
     targetRevision: 'master'
-  project: MI-app
+  project: mi-app
   syncPolicy:
     automated: {}

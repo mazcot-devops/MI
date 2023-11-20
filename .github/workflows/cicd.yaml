@@ -26,8 +26,8 @@ jobs:
 
     - name: Build and Push Docker Image
       run: |
-        docker build -t mazcot4devops/MI-app:latest .
-        docker push mazcot4devops/MI-app:latest
+        docker build -t mazcot4devops/mi-app:latest .
+        docker push mazcot4devops/mi-app:latest
 
     - name: Run SonarQube Scan
       uses: sonarsource/sonarcloud-github-action@master
@@ -39,6 +39,6 @@ jobs:
       run: |
         helm repo add stable https://charts.helm.sh/stable
         helm repo update
-        helm upgrade MI-app ./devops/charts --namespace mi \
-          --set image.repository=mazcot4devops/MI-app \
+        helm upgrade mi-app ./devops/charts --namespace mi \
+          --set image.repository=mazcot4devops/mi-app \
           --set image.tag=latest

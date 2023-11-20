@@ -7,5 +7,5 @@ resources:
 namespace: mi
 images:
 - name: mi-image
-  newName: mazcot4devops/MI-app
+  newName: mazcot4devops/mi-app
   newTag: latest

@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: MI-app-deployment
+  name: mi-app-deployment
   namespace: mi
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: MI-app
+      app: mi-app
   template:
     metadata:
       labels:
-        app: MI-app
+        app: mi-app
     spec:
       containers:
-      - name: MI-app
+      - name: mi-app
         image: mi-image
         ports:
         - containerPort: 8080
