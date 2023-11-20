@@ -29,11 +29,6 @@ jobs:
         docker build -t mazcot4devops/mi-app:latest .
         docker push mazcot4devops/mi-app:latest
 
-    - name: Run SonarQube Scan
-      uses: sonarsource/sonarcloud-github-action@master
-      env:
-        GITHUB_TOKEN: ${{ secrets.GIT_TOKEN }}
-        SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
 
     - name: Update Helm Chart Image
       run: |

@@ -1,0 +1,21 @@
+name: Scan
+
+on:
+  push:
+    branches:
+    - master
+
+jobs:
+  sonarCloudTrigger:
+    name: SonarCloud Trigger
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v2
+
+
+    - name: Run SonarQube Scan
+      uses: sonarsource/sonarcloud-github-action@master
+      env:
+        GITHUB_TOKEN: ${{ secrets.GIT_TOKEN }}
+        SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
