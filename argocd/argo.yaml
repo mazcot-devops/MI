@@ -1,16 +1,16 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: ml-app
-  namespace: default
+  name: MI-app
+  namespace: mi
 spec:
   destination:
     server: 'https://kubernetes.default.svc'
-    namespace: default
+    namespace: mi
   source:
-    repoURL: 'https://github.com/mazcot-devops/project-test'
+    repoURL: 'https://github.com/mazcot-devops/MI'
     path: 'deployment'
     targetRevision: 'master'
-  project: default
+  project: MI-app
   syncPolicy:
     automated: {}

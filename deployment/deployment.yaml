@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: ml-app-deployment
-  namespace: ml
+  name: MI-app-deployment
+  namespace: mi
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: ml-app
+      app: MI-app
   template:
     metadata:
       labels:
-        app: ml-app
+        app: MI-app
     spec:
       containers:
-      - name: ml-app
-        image: ml-image
+      - name: MI-app
+        image: mi-image
         ports:
         - containerPort: 8080
