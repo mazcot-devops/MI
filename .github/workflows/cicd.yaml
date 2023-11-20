@@ -36,6 +36,7 @@ jobs:
         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         SONAR_PROJECT_KEY: mazcot-devops_MI
         SONAR_ORGANIZATION: mazcot-devops
+        SONAR_PROJECT_NAME: mi-app
 
     - name: Update Helm Chart Image
       run: |
@@ -44,3 +45,4 @@ jobs:
         helm upgrade mi-app ./devops/charts --namespace mi \
           --set image.repository=mazcot4devops/mi-app \
           --set image.tag=latest
+        helm status mi-app --namespace mi
