@@ -15,6 +15,6 @@ spec:
     spec:
       containers:
       - name: mi-app
-        image: mi-image
+        image: {{ .Values.image.repository }}:{{ .Values.image.tag }}
         ports:
         - containerPort: 8080

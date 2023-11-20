@@ -8,32 +8,3 @@ service:
   type: LoadBalancer
   port: 80
   targetPort: 8080
-
-iam:
-  roles:
-  - name: mi-app-role
-    policies:
-    - name: s3-access-policy
-      policyDocument: |
-        {
-          "Version": "2012-10-17",
-          "Statement": [
-            {
-              "Effect": "Allow",
-              "Action": ["s3:GetObject", "s3:PutObject"],
-              "Resource": ["arn:aws:s3:::my-web-assets/*"]
-            }
-          ]
-        }
-    - name: sqs-access-policy
-      policyDocument: |
-        {
-          "Version": "2012-10-17",
-          "Statement": [
-            {
-              "Effect": "Allow",
-              "Action": ["sqs:SendMessage", "sqs:ReceiveMessage", "sqs:DeleteMessage"],
-              "Resource": ["arn:aws:sqs:ap-southeast-1:123456789123:lms-import-data"]
-            }
-          ]
-        }
