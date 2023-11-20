@@ -32,7 +32,7 @@ func readinessHandler(w http.ResponseWriter, r *http.Request) {
 }
 
 func main() {
-	// Create Server and Route Handlers
+	// Create Server and Route Handlersrrr
 	r := mux.NewRouter()
 
 	r.HandleFunc("/", handler)
