@@ -62,7 +62,7 @@ func waitForShutdown(srv *http.Server) {
 	interruptChan := make(chan os.Signal, 1)
 	signal.Notify(interruptChan, os.Interrupt, syscall.SIGINT, syscall.SIGTERM)
 
-	// Block until we receive our signal.
+	// Block until we receive our signal.ded
 	<-interruptChan
 
 	// Create a deadline to wait for.
