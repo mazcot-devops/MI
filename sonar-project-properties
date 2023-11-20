@@ -1,0 +1,3 @@
+sonar.organization= mazcot-devops
+sonar.projectKey= mazcot-devops_MI
+sonar.sources=.

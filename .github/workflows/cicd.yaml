@@ -34,9 +34,6 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GIT_TOKEN }}
         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-        SONAR_PROJECT_KEY: mazcot-devops_MI
-        SONAR_ORGANIZATION: mazcot-devops
-        SONAR_PROJECT_NAME: mi-app
 
     - name: Update Helm Chart Image
       run: |
