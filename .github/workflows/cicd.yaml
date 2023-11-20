@@ -29,5 +29,5 @@ jobs:
         docker build -t mazcot4devops/mi-app:latest .
         docker push mazcot4devops/mi-app:latest
 
-    - name: Update Helm Chart Image
-      run: "helm repo add stable https://charts.helm.sh/stable\nhelm repo update\ncd charts || exit  \nhelm upgrade mi-app ./ --namespace mi \\\n  --set image.repository=mazcot4devops/mi-app \\\n  --set image.tag=latest\nhelm status mi-app --namespace mi\n"
+    #- name: Update Helm Chart Image
+    #run: "helm repo add stable https://charts.helm.sh/stable\nhelm repo update\ncd charts  \nhelm upgrade mi-app ./ --namespace mi \\\n  --set image.repository=mazcot4devops/mi-app \\\n  --set image.tag=latest\nhelm status mi-app --namespace mi\n"
