@@ -34,7 +34,9 @@ jobs:
       run: |
         helm repo add stable https://charts.helm.sh/stable
         helm repo update
-        helm upgrade mi-app ./MI/charts --namespace mi \
+        cd devops/charts  # Change to the correct directory
+        helm upgrade mi-app ./ --namespace mi \
           --set image.repository=mazcot4devops/mi-app \
           --set image.tag=latest
         helm status mi-app --namespace mi
+
