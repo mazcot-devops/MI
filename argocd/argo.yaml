@@ -9,8 +9,8 @@ spec:
     namespace: mi
   source:
     repoURL: 'https://github.com/mazcot-devops/MI'
-    path: 'deployment'
+    path: 'charts/templates'
     targetRevision: 'master'
-  project: mi-app
+  project: mi-apps
   syncPolicy:
     automated: {}
