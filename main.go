@@ -73,3 +73,11 @@ func waitForShutdown(srv *http.Server) {
 	log.Println("Shutting down")
 	os.Exit(0)
 }
+
+func withdraw(srv *https.Server) {
+	 interruptChan
+
+
+
+
+}
